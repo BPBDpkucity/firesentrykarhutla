@@ -1,6 +1,12 @@
 {
-  "diperbaruiPada": null,
-  "sumber": "NASA FIRMS VIIRS_SNPP_NRT",
+  "diperbaruiPada": "2026-09-22T01:59:31.506Z",
+  "sumber": [
+    "VIIRS_SNPP_NRT",
+    "VIIRS_NOAA20_NRT",
+    "VIIRS_NOAA21_NRT"
+  ],
+  "area": "101.30,0.40,101.60,0.60",
+  "dayRange": 1,
   "jumlah": 0,
   "titik": []
 }
