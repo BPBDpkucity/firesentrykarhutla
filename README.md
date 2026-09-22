@@ -164,3 +164,12 @@ latitude & longitude: ...
 ```
 
 Koordinat berasal dari titik FIRMS yang terdeteksi untuk kecamatan terkait; bila tidak ada hotspot, sistem memakai titik acuan kecamatan. Link peta membuka `peta.html` pada koordinat tersebut.
+
+
+## Test Telegram dari GitHub Actions
+
+Buka **Actions → FireSentry - Cek Status Karhutla → Run workflow**. Pada `mode`, pilih **test-telegram**. Test menggunakan data BMKG dan NASA FIRMS hasil run saat itu, tetapi pesan diberi label **SIMULASI** sehingga tidak disalahartikan sebagai peringatan operasional. Mode `normal` dipakai untuk pengecekan biasa/terjadwal.
+
+### Validasi NASA FIRMS
+
+Workflow mencatat jumlah deteksi per sensor (`VIIRS_SNPP_NRT`, `VIIRS_NOAA20_NRT`, `VIIRS_NOAA21_NRT`), jumlah setelah deduplikasi, dan contoh koordinat pada log Actions. Data terakhir disimpan di `data/hotspot-live.json`. Pemetaan hotspot ke kecamatan menggunakan poligon `assets/js/batas-kecamatan.js` bila tersedia, lalu fallback ke titik acuan kecamatan.
